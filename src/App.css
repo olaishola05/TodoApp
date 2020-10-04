@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+.app {
+    width: 55%;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid gray;
+    margin-top: 50px;
+    margin-bottom: 0 auto;
+    border-radius: 10px;
+    padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+    width: 80px;
+    padding: 7px;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todo {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.todo input {
+    height: 30px;
+    margin-right: 10px;
+    width: 300px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+form {
+    display: inline-flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form button {
+    width: 100px;
+    padding: 5px 9px;
+    cursor: pointer;
+    background: black;
+    color: white;
+}
+
+.btnComponent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.btnComponent button {
+    width: 100px;
+    padding: 10px 9px;
+    cursor: pointer;
+}
+
+.completed {
+    background: red;
+    color: whitesmoke;
+}
+
+.active {
+    background: green;
+    color: white;
+}
+
+.todo-items {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid goldenrod;
+    margin: 8px;
+    border-radius: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.todo-items button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    padding: "5px 9px";
+    background: red;
+    color: white;
+    margin-right: 10px;
+}
+
+.todo-items input {
+    margin-left: 5px;
+}
+
+.todo-items p {
+    padding: 10px;
+    font-size: 15px;
+    display: inline-flex;
 }
