@@ -4,7 +4,7 @@ import todoData from "./components/TodoData";
 import ButtonCommponent from "./components/ButtonComponent";
 import AddTodo from "./components/AddTodo";
 import "./App.css";
-import { v4 as uuidv4 } from "uuid";
+// import { v4 as uuidv4 } from "uuid";
 
 export class App extends Component {
     constructor() {
@@ -12,8 +12,6 @@ export class App extends Component {
         this.state = {
             data: todoData,
         };
-
-        // this.handleChange = this.handleChange.bind(this);
     }
 
     handleChange = (id) => {
@@ -33,6 +31,7 @@ export class App extends Component {
 
     //  Delete Todo from list
     delTodo = (id) => {
+        console.log(id);
         this.setState((prevState) => {
             const updateState = prevState.data.filter((todo) => todo.id !== id);
             return {
@@ -43,7 +42,7 @@ export class App extends Component {
 
     addTodo = (text) => {
         const newTodo = {
-            id: uuidv4,
+            id: "",
             text: text,
             completed: false,
         };
@@ -53,12 +52,13 @@ export class App extends Component {
             };
         });
     };
+
     render() {
         const TodoItems = this.state.data.map((todo) => <Todo key={todo.id} todo={todo} handleChange={this.handleChange} delTodo={this.delTodo} />);
         return (
             <div className="app">
                 <AddTodo addTodo={this.addTodo} />
-                <ButtonCommponent />
+                <ButtonCommponent completeBtn={this.props.completeBtn} />
                 {TodoItems}
             </div>
         );

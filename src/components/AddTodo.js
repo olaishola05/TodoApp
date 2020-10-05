@@ -19,6 +19,7 @@ export class AddTodo extends Component {
         this.props.addTodo(this.state.text);
         this.setState({ text: "" });
     };
+
     render() {
         return (
             <div className="todo">
