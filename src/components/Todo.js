@@ -3,7 +3,6 @@ import React, { Component } from "react";
 export class Todo extends Component {
     render() {
         const { id } = this.props.todo;
-        console.log(id);
         return (
             <div className="todo-items">
                 <div>
