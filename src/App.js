@@ -16,17 +16,14 @@ export class App extends Component {
     }
 
     handleChange = (id) => {
-        this.setState((prevState) => {
-            const updateData = prevState.data.map((todo) => {
+        this.setState({
+            data: this.state.data.map((todo) => {
                 if (todo.id === id) {
                     todo.completed = !todo.completed;
+                    console.log(todo.completed);
                 }
                 return todo;
-            });
-
-            return {
-                data: updateData,
-            };
+            }),
         });
     };
 
@@ -56,17 +53,16 @@ export class App extends Component {
     };
 
     completeBtn = (id) => {
-        this.setState((prevState) => {
-            const updateState = prevState.data.map((todo) => {
-                if (todo.completed) {
-                    console.log(id);
-                    return todo;
-                }
-                // console.log(todo);
-                return todo;
-            });
+        this.setState((prevstate) => {
             return {
-                data: updateState,
+                data: prevstate.data.map((todo) => {
+                    if (id === todo.completed) {
+                    }
+
+                    return {
+                        todo,
+                    };
+                }),
             };
         });
     };
