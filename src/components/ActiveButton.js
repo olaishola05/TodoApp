@@ -4,7 +4,12 @@ export class ActiveButton extends Component {
     render() {
         return (
             <div>
-                <button className="active">Active</button>
+                <button
+                    className="active"
+                    onClick={this.props.activeTodos}
+                >
+                    Active
+                </button>
             </div>
         );
     }

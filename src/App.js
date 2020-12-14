@@ -4,6 +4,7 @@ import todoData from "./components/TodoData";
 import ButtonComplete from "./components/ButtonComplete";
 import AddTodo from "./components/AddTodo";
 import ActiveButton from "./components/ActiveButton";
+import AllTodos from "./components/AllTodos";
 import "./App.css";
 import { v4 as uuidv4 } from "uuid";
 
@@ -12,6 +13,7 @@ export class App extends Component {
         super();
         this.state = {
             data: todoData,
+            currentState: "all",
         };
     }
 
@@ -27,11 +29,22 @@ export class App extends Component {
         });
     };
 
+    // All todos
+    AllTodos = (id) => {
+        this.setState((prevState) => {
+            return {
+                currentState: "all",
+            };
+        });
+    };
+
     //  Delete Todo from list
     delTodo = (id) => {
         console.log(id);
         this.setState((prevState) => {
-            const updateState = prevState.data.filter((todo) => todo.id !== id);
+            const updateState = prevState.data.filter(
+                (todo) => todo.id !== id
+            );
             return {
                 data: updateState,
             };
@@ -39,7 +52,6 @@ export class App extends Component {
     };
 
     addTodo = (text) => {
-        // const uid = () => Math.random.toString(34).slice(2);
         const newTodo = {
             id: uuidv4(),
             text: text,
@@ -52,29 +64,54 @@ export class App extends Component {
         });
     };
 
-    completeBtn = (id) => {
+    completeBtn = () => {
         this.setState((prevstate) => {
             return {
-                data: prevstate.data.map((todo) => {
-                    if (id === todo.completed) {
-                    }
+                currentState: "completed",
+            };
+        });
+    };
 
-                    return {
-                        todo,
-                    };
-                }),
+    activeTodos = () => {
+        this.setState((prevState) => {
+            return {
+                currentState: "active",
             };
         });
     };
 
     render() {
-        const TodoItems = this.state.data.map((todo) => <Todo key={todo.id} todo={todo} handleChange={this.handleChange} delTodo={this.delTodo} completeBtn={this.completeBtn} />);
+        const TodoItems = this.state.data
+            .filter((item) => {
+                if (this.state.currentState === "active") {
+                    return !item.completed;
+                } else if (
+                    this.state.currentState === "completed"
+                ) {
+                    return item.completed;
+                } else {
+                    return true;
+                }
+            })
+            .map((todo) => (
+                <Todo
+                    key={todo.id}
+                    todo={todo}
+                    handleChange={this.handleChange}
+                    delTodo={this.delTodo}
+                />
+            ));
         return (
             <div className="app">
                 <AddTodo addTodo={this.addTodo} />
                 <div className="btnComponent">
-                    <ButtonComplete completeBtn={this.completeBtn} />
-                    <ActiveButton />
+                    <AllTodos AllTodos={this.AllTodos} />
+                    <ButtonComplete
+                        completeBtn={this.completeBtn}
+                    />
+                    <ActiveButton
+                        activeTodos={this.activeTodos}
+                    />
                 </div>
                 {TodoItems}
             </div>
