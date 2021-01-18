@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Todo from "./components/Todo";
-import todoData from "./components/TodoData";
+// import todoData from "./components/TodoData";
 import ButtonComplete from "./components/ButtonComplete";
 import AddTodo from "./components/AddTodo";
 import ActiveButton from "./components/ActiveButton";
@@ -12,7 +12,7 @@ export class App extends Component {
     constructor() {
         super();
         this.state = {
-            data: todoData,
+            data: [],
             currentState: "all",
         };
     }
