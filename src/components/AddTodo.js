@@ -24,11 +24,15 @@ export class AddTodo extends Component {
         return (
             <div className="todo">
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" name="text" value={this.state.text} placeholder="Add new todo" onChange={this.onChange} />
+                    <input
+                        type="text"
+                        name="text"
+                        value={this.state.text}
+                        placeholder="Add new todo"
+                        onChange={this.onChange}
+                    />
                     <button>Add Todo</button>
                 </form>
-
-                <p>{this.state.text}</p>
             </div>
         );
     }
