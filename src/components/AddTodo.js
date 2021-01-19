@@ -16,7 +16,13 @@ export class AddTodo extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.addTodo(this.state.text);
+
+        if (!this.state.text) {
+            return null;
+        } else {
+            this.props.addTodo(this.state.text);
+        }
+
         this.setState({ text: "" });
     };
 

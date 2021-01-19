@@ -14,7 +14,10 @@ export class Todo extends Component {
                             id
                         )}
                     />
-                    <p style={completed ? checkStyle : null}>
+                    <p
+                        className="todo-para"
+                        style={completed ? checkStyle : null}
+                    >
                         {text}
                     </p>
                 </div>
