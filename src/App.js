@@ -101,19 +101,27 @@ export class App extends Component {
                 />
             ));
         return (
-            <div className="app">
+            <>
+                <h1 className="app-name">
+                    Keep Yourself Organized by managing your
+                    tasks with our Task manging App.
+                </h1>
+
                 <AddTodo addTodo={this.addTodo} />
-                <div className="btnComponent">
-                    <AllTodos AllTodos={this.AllTodos} />
-                    <ButtonComplete
-                        completeBtn={this.completeBtn}
-                    />
-                    <ActiveButton
-                        activeTodos={this.activeTodos}
-                    />
+
+                <div className="app">
+                    <div className="btnComponent">
+                        <AllTodos AllTodos={this.AllTodos} />
+                        <ButtonComplete
+                            completeBtn={this.completeBtn}
+                        />
+                        <ActiveButton
+                            activeTodos={this.activeTodos}
+                        />
+                    </div>
+                    {TodoItems}
                 </div>
-                {TodoItems}
-            </div>
+            </>
         );
     }
 }

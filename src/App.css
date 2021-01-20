@@ -1,7 +1,5 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+    overflow: auto;
 }
 .app {
     width: 50%;
@@ -9,9 +7,19 @@
     margin: 0 auto;
     border: 0.1px solid gray;
     margin-top: 50px;
-    margin-bottom: 0 auto;
     border-radius: 10px;
     padding: 20px;
+}
+
+.app-name {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.2rem;
+    border-bottom: 0.3px solid gray;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 button {
@@ -26,11 +34,10 @@ button {
 .todo {
     text-align: center;
     margin-top: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .todo input {
-    height: 35px;
     margin-right: 10px;
     width: 400px;
     font-family: Cambria, Cochin, Georgia, Times,
@@ -68,13 +75,13 @@ form button {
 }
 
 .completed {
-    background: red;
-    color: whitesmoke;
+    background: #efefef;
+    color: black;
 }
 
 .active {
-    background: green;
-    color: white;
+    background: #efefef;
+    color: black;
 }
 
 .todo-items {
@@ -106,7 +113,138 @@ form button {
 }
 
 .todo-items p {
-    padding: 10px;
+    padding: 3px;
     font-size: 18px;
     display: inline-flex;
+}
+
+/* Media query */
+@media only screen and (max-width: 600px) {
+    .app {
+        width: 85%;
+        margin: 0 auto;
+        margin-top: 10px;
+        /* border: none; */
+    }
+    .app-name {
+        width: 85%;
+        margin: 0 auto;
+        margin-top: 40px;
+        text-align: justify;
+        font-size: 1.2rem;
+        border-bottom: 0.3px solid gray;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+    }
+    .todo {
+        margin-bottom: 25px;
+    }
+    .todo input {
+        width: 230px;
+        padding: 5px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .app {
+        width: 85%;
+        margin: 0 auto;
+        margin-top: 10px;
+        /* border: none; */
+    }
+    .app-name {
+        width: 85%;
+        margin: 0 auto;
+        margin-top: 40px;
+        text-align: justify;
+        font-size: 1.2rem;
+        border-bottom: 0.3px solid gray;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+    }
+    .todo {
+        margin-bottom: 25px;
+    }
+    .todo input {
+        width: 230px;
+        padding: 5px;
+        border: 0.2px solid black;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .app {
+        width: 85%;
+        margin: 0 auto;
+        margin-top: 10px;
+        /* border: none; */
+    }
+    .app-name {
+        width: 85%;
+        margin: 0 auto;
+        margin-top: 40px;
+        text-align: center;
+        font-size: 1.2rem;
+        border-bottom: 0.3px solid gray;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+    }
+    .todo {
+        margin-bottom: 25px;
+    }
+    .todo input {
+        width: 400px;
+        padding: 8px;
+        border: 0.2px solid black;
+    }
+
+    .todo-items p {
+        font-size: 1.5rem;
+        font-family: "Times New Roman", Times, serif;
+        padding-left: 10px;
+    }
+
+    .todo-items input {
+        margin-left: 10px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .app {
+        width: 55%;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 10px;
+        /* border: none; */
+    }
+    .app-name {
+        width: 85%;
+        margin: 0 auto;
+        margin-top: 20px;
+        text-align: center;
+        font-size: 1.2rem;
+        border-bottom: 0.3px solid gray;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+    }
+    .todo {
+        margin-bottom: 25px;
+    }
+    .todo input {
+        width: 400px;
+        padding: 8px;
+        border: 0.2px solid black;
+    }
+    .todo-items {
+        padding: 5px;
+    }
+
+    .todo-items p {
+        font-size: 1.5rem;
+        font-family: "Times New Roman", Times, serif;
+        padding-left: 10px;
+    }
+
+    .todo-items input {
+        margin-left: 10px;
+    }
 }

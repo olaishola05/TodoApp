@@ -1,68 +1,93 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- Project Title -->
+# Todo App
 
-## Available Scripts
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+<summary>Table of Contents</summary>
+<ol>
+<li>
+<a href="#about-the-project">About The Project</a>
+<ul>
+    <li><a href="#motivation">Motivation</a></li>
+</ul>
+<ul>
+    <li><a href="#built-with">Built With</a></li>
+</ul>
+</li>
+<li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+<li><a href="#contributing">Contributing</a></li>
+<li><a href="#license">License</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#credits">Credits</a></li>
+</ol>
+</details>
 
-In the project directory, you can run:
+<!-- About the Project -->
+## About The Project
+![random-meal-generator screenshot](/img/meal-New.png)
 
-### `npm start`
+![random-meal-generator screenshot-2](/img/meal1.png)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![random-meal-generator screenshot-3](/img/meal2.png)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+A Todo app for organizing day to day tasks. If the tasks are ticked as completed, it puts a line through it. It also filtered for active todos.
 
-### `npm test`
+### Motivation
+The motivation behind this project is to get into the habit of building projects using technologies, tools and concept learnt along my programming journey and to solidify coding skills and build muscle memory.  
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Built With
+The project was built with the following Tech/framework:
+* HTML, CSS and JavaScript
+* [Bootstrap](https://getbootstrap.com)
+* [Axios](https://github.com/axios/axios)
+* [TheMealDB API](https://www.themealdb.com/api.php)
+* [VSCode Liveserver Extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
-### `npm run build`
+<!-- GETTING STARTED -->
+## Getting Started
+To get a local copy up and running follow these simple example steps.
+### Prerequisites
+* npm
+`npm install axios`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Install liveserver from VSCode extension
+### Installation
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+1. Checkout how the ThemealDB API data is structured and types of API calls [TheMealDB API](https://www.themealdb.com/api.php). The API is free and include the test key in the url.
+2. Clone the repo
+   `git clone https://github.com/netman5/Random-Meal-Generator.git`
+3. Run the App by clicking on the liverserver extension at the bottom right corner of VScode
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<!-- CONTRIBUTING -->
+## Contributing
+Any contributions you make are **greatly appreciated**.
 
-### `npm run eject`
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<!-- LICENSE -->
+## License
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Distributed under the MIT License. See `LICENSE` for more information.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[MIT](https://choosealicense.com/licenses/mit/) © Ola Ishola.
 
-## Learn More
+<!-- CONTACT -->
+## Contact
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Ola Ishola - [@Orlaish](https://twitter.com/@Orlaish) - olaishola@hotmail.co.uk
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Project Link: [https://randomrecipegenerator.netlify.app/](https://randomrecipegenerator.netlify.app/)
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Credits
+- **Florin Pop**: [Twitter](https://twitter.com/florinpop1705) - [YouTube Channel](https://youtube.com/florinpop) - [website](https://florin-pop.com).
