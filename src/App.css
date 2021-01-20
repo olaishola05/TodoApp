@@ -42,16 +42,17 @@ button {
     width: 400px;
     font-family: Cambria, Cochin, Georgia, Times,
         "Times New Roman", serif;
-    font-size: 18px;
+    font-size: 16px;
+    font-style: italic;
     text-align: justify;
     border-radius: 5px;
     padding: 10px;
     border: 0.1px solid gray;
 }
 
-form {
+/* form {
     display: inline-flex;
-}
+} */
 
 form button {
     width: 100px;
@@ -65,12 +66,12 @@ form button {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .btnComponent button {
     width: 100px;
-    padding: 10px 9px;
+    padding: 5px 4px;
     cursor: pointer;
 }
 
@@ -94,7 +95,6 @@ form button {
     border-radius: 5px;
     align-items: center;
     width: 90%;
-    padding: 5px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -102,7 +102,6 @@ form button {
     margin-top: 5px;
     margin-bottom: 5px;
     cursor: pointer;
-    padding: "5px 9px";
     font-size: 18px;
     color: black;
     margin-right: 10px;
@@ -165,6 +164,7 @@ form button {
     .todo {
         margin-bottom: 25px;
     }
+
     .todo input {
         width: 230px;
         padding: 5px;
@@ -239,7 +239,7 @@ form button {
     }
 
     .todo-items p {
-        font-size: 1.5rem;
+        font-size: 18px;
         font-family: "Times New Roman", Times, serif;
         padding-left: 10px;
     }

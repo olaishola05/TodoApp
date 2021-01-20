@@ -13,6 +13,7 @@ export class App extends Component {
         this.state = {
             data: [],
             currentState: "all",
+            store: [],
         };
     }
 
@@ -59,9 +60,26 @@ export class App extends Component {
         this.setState((prevState) => {
             return {
                 data: [...prevState.data, newTodo],
+                store: [
+                    localStorage.setItem(
+                        "newTodos",
+                        JSON.stringify(newTodo)
+                    ),
+                ],
             };
         });
     };
+
+    componentDidMount() {
+        const storedTodos = localStorage.getItem("newTodos");
+        if (storedTodos) {
+            this.setState((prevState) => {
+                return {
+                    store: JSON.parse(storedTodos),
+                };
+            });
+        }
+    }
 
     completeBtn = () => {
         this.setState((prevstate) => {
