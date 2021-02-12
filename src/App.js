@@ -60,12 +60,10 @@ export class App extends Component {
         this.setState((prevState) => {
             return {
                 data: [...prevState.data, newTodo],
-                store: [
-                    localStorage.setItem(
-                        "newTodos",
-                        JSON.stringify(newTodo)
-                    ),
-                ],
+                store: localStorage.setItem(
+                    "newTodos",
+                    JSON.stringify(newTodo)
+                ),
             };
         });
     };
@@ -73,11 +71,7 @@ export class App extends Component {
     componentDidMount() {
         const storedTodos = localStorage.getItem("newTodos");
         if (storedTodos) {
-            this.setState((prevState) => {
-                return {
-                    store: JSON.parse(storedTodos),
-                };
-            });
+            this.setState({ store: JSON.parse(storedTodos) });
         }
     }
 
